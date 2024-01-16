@@ -57,23 +57,58 @@ console.log(`Random Number: ${randomNumber}`);
 console.log(`The number is ${toDisplay}.`);
 
 // Checkpoint 2.1 How do you use switch statements and when would you use them? Try researching the answer
-// Answer: 
+// Answer: In JavaScript, a switch statement is a control flow structure that allows you to select one of many code blocks to be executed. 
+//It's a more concise and readable way to handle multiple conditions compared to using a series of if-else statements.
 
 // TODO 2.5 Use a for loop to print the numbers 1 to N
 
 // Your code here
 
+let N = 10;
+
+for (let i = 1; i <= N; i++) {
+  console.log(i);
+}
+
+
 // TODO 2.6 Use a while loop to display all the values in the list
 // Your code here
 
+let myList = [3, 7, 12, 18, 25];
+let index = 0;
+
+while (index < myList.length) {
+  console.log(myList[index]);
+  index++;
+}
+
+
 // Checkpoint 2.3 How would you simulate a do-while loop in JavaScript
 // Answer: 
+/* In JavaScript, there is no direct "do-while" loop syntax like in some 
+other programming languages. However, you can simulate the behavior of a 
+do-while loop using a while loop. The key difference between a do-while loop 
+and a regular while loop is that a do-while loop guarantees that the code inside 
+the loop is executed at least once, as the condition is checked after the loop body.*/
 
 // TODO 2.7 Use a for of loop to display all the values in the list
 // Your code here
 
+let akingListahan = [3, 7, 12, 18, 25];
+
+for (let value of akingListahan) {
+  console.log(value);
+}
+
+
 // TODO 2.8 Use a for in loop to display all the values in the list
 // Your code here
+
+let listahan = [2, 4, 6, 8, 10];
+
+for (let index in listahan) {
+  console.log(listahan[index]);
+}
 
 // TODO 2.9 Use the for each method of the list to display all its values 
 // Your code here
