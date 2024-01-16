@@ -73,6 +73,7 @@ for (let i = 1; i <= N; i++) {
 
 // TODO 2.6 Use a while loop to display all the values in the list
 // Your code here
+
 let myList = [3, 7, 12, 18, 25];
 let index = 0;
 
