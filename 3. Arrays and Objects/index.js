@@ -68,27 +68,91 @@ console.log("Course Code:", it114lCourse.courseCode);
 console.log("Course Name:", it114lCourse.name);
 console.log("Units:", it114lCourse.units);
 console.log("Number of Students:", it114lCourse.numberOfStudents);
-console.log("Professor's Name:", it114Course.professorName);
+console.log("Professor's Name:", it114lCourse.professorName);
 
 
 // Todo 3.4 Add professor name as one of the fields of the object. Display the value of professor name.
 // Your code here
 
-/* Please see TODO 3.3. I've already added the Professor name in one of the fields...
+// Please see TODO 3.3. I've already added the Professor name in one of the fields...
 
 // Todo 3.5 Declare and array of objects with information about the courses you are taking this term
 // Your code here
 
+let courses = [
+    {
+        courseCode: 'IT114L',
+        name: 'Web Systems and Technologies',
+        units: 1,
+        numberOfStudents: '40+',
+        professorName: 'Job Lipat',
+    },
+    {
+        courseCode: 'CS102-1',
+        name: 'Data Structures and Algorithms',
+        units: 3,
+        numberOfStudents: '50+',
+        professorName: 'Terrence Lim',
+    },
+    {
+        courseCode: 'IT133',
+        name: 'Technopreneurship',
+        units: 3,
+        numberOfStudents: '50+',
+        professorName: 'Khristian Kikiuchi',
+    }
+];
+
+// Accessing and displaying information about each course
+courses.forEach(course => {
+    console.log("Course Code:", course.courseCode);
+    console.log("Course Name:", course.name);
+    console.log("Units:", course.units);
+    console.log("Number of Students:", course.numberOfStudents);
+    console.log("Professor's Name:", course.professorName);
+    console.log("--------------"); // Separating each course for clarity
+});
 
 
 // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
 // Your code here
 
+let totalUnits = courses.reduce((total, course) => total + course.units, 0);
+
+console.log("Total Units:", totalUnits);
+
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
-// Answer: 
+// Answer: In Python, the equivalent of JavaScript objects is dictionaries. Both objects in JavaScript 
+// and dictionaries in Python are used to store and organize data in a key-value pair format.
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
 
+let originalArray = [1, 2, 3, 4, 5];
+let additionalNumber = 6;
+
+// Create a copy of the array with an additional number
+let newArray = [...originalArray, additionalNumber];
+
+// Display both arrays
+console.log("Original Array:", originalArray);
+console.log("New Array:", newArray);
+
 // Todo 3.7 Going back to your IT114L object, extract the course code and units using the spread operator
 // Your code here
+
+let IT114L = {
+    courseCode: 'IT114L',
+    name: 'Web Systems and Technologies',
+    units: 1,
+    numberOfStudents: '40+',
+    professorName: 'Job Lipat',
+};
+
+// Extracting courseCode and units using object destructuring
+let { courseCode, units } = IT114L;
+
+// Display the extracted values
+console.log("Course Code:", courseCode);
+console.log("Units:", units);
+
