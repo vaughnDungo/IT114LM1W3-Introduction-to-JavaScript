@@ -114,6 +114,15 @@ for (let index in listahan) {
 // TODO 2.9 Use the for each method of the list to display all its values 
 // Your code here
 
+// Sample list
+var numberList = [1, 2, 3, 4, 5];
+
+// Using forEach to display each value
+numberList.forEach(function(value) {
+    console.log(value);
+});
+
+
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
 // Answer: 
 
@@ -122,12 +131,16 @@ for (let index in listahan) {
 const numerator = Math.floor((Math.random() * 100) + 1);
 const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 
-
-if(denominator === 0){
-    throw new Error("Division by zero error")
-} else {
-    console.log(numerator / denominator);
+try {
+    if (denominator === 0) {
+        throw new Error("Division by zero error");
+    } else {
+        console.log(numerator / denominator);
+    }
+} catch (error) {
+    console.error(error.message);
+} finally {
+    console.log("Cleaning up resources");
 }
-
 
 
