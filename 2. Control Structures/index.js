@@ -73,7 +73,6 @@ for (let i = 1; i <= N; i++) {
 
 // TODO 2.6 Use a while loop to display all the values in the list
 // Your code here
-
 let myList = [3, 7, 12, 18, 25];
 let index = 0;
 
@@ -84,6 +83,7 @@ while (index < myList.length) {
 
 
 // Checkpoint 2.3 How would you simulate a do-while loop in JavaScript
+
 // Answer: 
 /* In JavaScript, there is no direct "do-while" loop syntax like in some 
 other programming languages. However, you can simulate the behavior of a 
@@ -121,5 +121,12 @@ for (let index in listahan) {
 const numerator = Math.floor((Math.random() * 100) + 1);
 const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 
-const quotient = numerator / denominator;
+
+if(denominator === 0){
+    throw new Error("Division by zero error")
+} else {
+    console.log(numerator / denominator);
+}
+
+
 
